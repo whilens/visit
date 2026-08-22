@@ -1,0 +1,63 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id              Int     @id @default(autoincrement())
+  name            String
+  nameEn          String
+  role            String
+  roleEn          String
+  tagline         String
+  taglineEn       String
+  bio             String
+  bioEn           String
+  email           String
+  telegram        String
+  github          String?
+  photoUrl        String?
+  education       String
+  educationEn     String
+  yearsExperience Float
+}
+
+model Skill {
+  id         Int    @id @default(autoincrement())
+  name       String
+  category   String
+  categoryEn String
+  level      Int
+  sort       Int    @default(0)
+}
+
+model Project {
+  id           Int      @id @default(autoincrement())
+  title        String
+  titleEn      String
+  summary      String
+  summaryEn    String
+  url          String?
+  highlights   String[]
+  highlightsEn String[]
+  stack        String[]
+  sort         Int      @default(0)
+}
+
+model Experience {
+  id        Int      @id @default(autoincrement())
+  company   String
+  companyEn String
+  role      String
+  roleEn    String
+  period    String
+  periodEn  String
+  items     String[]
+  itemsEn   String[]
+  sort      Int      @default(0)
+}
