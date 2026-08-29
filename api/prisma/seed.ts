@@ -18,9 +18,9 @@ async function main() {
         'Собираю живые продукты на TypeScript: API, интеграции, деплой на VPS — и интерфейс, которым пользуются люди.',
       taglineEn:
         'I ship live TypeScript products: APIs, integrations, VPS deploys — and interfaces people actually use.',
-      bio: '1,8 года строю сервисы целиком, с уклоном в backend. Доводил платформу единоборств SMA до сторов и 300+ активных пользователей: платежи, ЭЦП, чат, роли, инфраструктура. Параллельно собрал магазин с LLM-ассистентом, который смотрит в остатки, а не фантазирует витрину. Мне близки NestJS, Prisma, GraphQL и инфраструктура, в которой сервис доезжает до людей, а не живёт только на ноутбуке.',
+      bio: '1,8 года строю сервисы целиком, с уклоном в backend. Доводил платформу единоборств SMA до сторов и 300+ активных пользователей: платежи, ЭЦП, чат, роли, инфраструктура. Параллельно собрал магазин с LLM-ассистентом, который смотрит в остатки, а не фантазирует витрину.',
       bioEn:
-        'For 1.8 years I have been shipping full services, with a backend lean. I took the SMA combat-sports platform to the stores and 300+ active users: payments, e-signatures, chat, roles, infra. I also built a shop whose LLM assistant checks inventory instead of inventing the shelf. I like NestJS, Prisma, GraphQL, and infrastructure that reaches people — not just localhost.',
+        'For 1.8 years I have been shipping full services, with a backend lean. I took the SMA combat-sports platform to the stores and 300+ active users: payments, e-signatures, chat, roles, infra. I also built a shop whose LLM assistant checks inventory instead of inventing the shelf.',
       email: 'artem.ger134@gmail.com',
       telegram: 'https://t.me/success_player',
       github: null,

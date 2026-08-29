@@ -19,4 +19,19 @@ export class CardService {
 
     return { profile, skills, projects, experiences };
   }
+
+  async getCountSkills() {
+    const count = await this.prisma.skill.count();
+    return count;
+  }
+
+  async getTopSkills() {
+    const skills = await this.prisma.skill.findMany({ where: { level: 5 } });
+    return skills;
+  }
+
+  async getProjectByStack(stack: string) {
+    const projects = await this.prisma.project.findMany({where: {stack: {has: stack}}})
+    return projects;
+  }
 }

@@ -1,6 +1,6 @@
-import { Query, Resolver } from '@nestjs/graphql';
+import { Query, Resolver, Int, Args } from '@nestjs/graphql';
 import { CardService } from './card.service';
-import { Card } from './models';
+import { Card, Project, Skill } from './models';
 
 @Resolver()
 export class CardResolver {
@@ -10,4 +10,18 @@ export class CardResolver {
   card() {
     return this.cards.getCard();
   }
-}
+
+  @Query(() => Int)
+  skillCount() {
+    return this.cards.getCountSkills();
+  }
+
+  @Query(() => [Skill])
+  topSkills() {
+    return this.cards.getTopSkills();
+  }
+  @Query(() => [Project])
+  projectByStack(@Args('stack') stack: string) {
+    return this.cards.getProjectByStack(stack);
+  }
+} 
